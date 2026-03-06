@@ -119,7 +119,6 @@ python -c "from scapy.all import *; print('Scapy installed successfully!')"
 # Check available interfaces
 python deauth.py list
 ```
-################################
 
 🚀 Usage Guide
 Basic Syntax
