@@ -453,7 +453,7 @@ Automated target discovery
 
 Cross-platform support (Linux/macOS)
 
-<div align="center"> <strong>Made with ❤️ by STVCBD Sec Team</strong> <br> <br> <img src="https://raw.githubusercontent.com/STVCBD/stvcbd-sec-wifi-deauth/main/footer.png" width="400"> <br> <br> <sub>Copyright © 2024 STVCBD Sec. All rights reserved.</sub> <br> <sub>For educational purposes only.</sub> </div>
+<div align="center"> <strong>Made with ❤️ by STVCBD Sec Team</strong> <br> <br> <img src="https://raw.githubusercontent.com/STVCBD/stvcbd-sec-wifi-deauth/main/footer.png" width="400"> <br> <br> <sub>Copyright © 2026 STVCBD Sec. All rights reserved.</sub> <br> <sub>For educational purposes only.</sub> </div>
 🔗 Quick Links
 📥 Download Latest Release
 
